@@ -24,18 +24,4 @@ public class LivroDAO {
   public boolean removerPorId(int id) {
     return livros.removeIf(l -> l.getId() == id);
   }
-
-}2.3
-
-Página JSP (index.jsp)
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-    <title>Biblioteca Cesumar</title>
-</head>
-<body>
-    <h1>Bem-vindo ao Sistema da Biblioteca</h1>
-    <a href="cadastro-livro.xhtml">Cadastrar Livro</a> | 
-    <a href="lista-livros.xhtml">Ver Acervo</a>
-</body>
-</html>
+}
