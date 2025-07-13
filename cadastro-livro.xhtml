@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+  <title>Cadastro de Livros</title>
+</h:head>
+<h:body>
+  <h1>Cadastro de Livros</h1>
+
+  <h:form>
+    <h:panelGrid columns="2">
+      <h:outputLabel value="Título:" for="titulo" />
+      <h:inputText id="titulo" value="#{livroController.livro.titulo}" required="true" />
+
+      <h:outputLabel value="Autor:" for="autor" />
+      <h:inputText id="autor" value="#{livroController.livro.autor}" required="true" />
+
+      <h:outputLabel value="Ano de Publicação:" for="anoPublicacao" />
+      <h:inputText id="anoPublicacao" value="#{livroController.livro.anoPublicacao}" required="true" />
+
+      <h:outputLabel value="ISBN (XXX-XX-XXXX-XXX-X):" for="isbn" />
+      <h:inputText id="isbn" value="#{livroController.livro.isbn}" required="true" />
+    </h:panelGrid>
+
+    <h:commandButton value="Cadastrar" action="#{livroController.cadastrar()}" />
+    <h:commandButton value="Listar Livros" action="lista-livros?faces-redirect=true" />
+
+    <h:outputText value="#{livroController.mensagemErro}" style="color: red;" rendered="#{livroController.mensagemErro != null}" />
+  </h:form>
+</h:body>
+
+</html>
